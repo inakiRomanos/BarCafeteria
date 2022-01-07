@@ -88,6 +88,11 @@ public class VentanaPrincipalController implements Initializable {
         stage.setScene(new Scene(root));
         stage.show();
     }
-    
 
+    @FXML
+    private void borrar(ActionEvent event) {
+        Pedidos p = (Pedidos) tablaPrincipal.getSelectionModel().getSelectedItem();
+                datos.remove(p);
+    }
+    
 }
